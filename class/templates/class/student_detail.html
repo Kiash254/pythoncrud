@@ -1,0 +1,8 @@
+<h2>HELLO YOUR ARE IN DETAIL VIEW</h2>
+
+
+{% for student in students  %}
+<a href="{% url 'class:students' student.id %}" >{{student.name}}</a>
+<a href="{% url 'class:update-view' student.id%}" >Update</a>
+<a href="{% url 'class:delete-view' student.id %}" >delete</a>
+{%  endfor %}
